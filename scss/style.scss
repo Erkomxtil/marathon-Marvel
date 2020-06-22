@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'montserat', sans-serif;
+}
+#app{
+  display: flex;
+  flex-wrap: wrap;
+  background: black url("/images/fond-galaxie.jpg");
+  color: white;
+  justify-content: center;
+
+  .block{
+    cursor: pointer;
+    img{
+      width: 256px;
+    }
+
+    p{
+      padding: 4px 8px;
+    }
+  }
+
+  #ficheInfos {
+    display: none;
+    &.active {
+      width: 400px;
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px  20px;
+
+      img {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .cross {
+        font-size: 0.8rem;
+        background: white;
+        color: black;
+        padding: 0.1rem 0.3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1250px) {
+  #app {
+    #ficheInfos {
+      display: none;
+      &.active {
+        width: unset;
+        display: flex;
+        flex-direction: unset;
+  
+        img {
+          width: 50%;
+          margin-right: 10px;
+        }
+  
+        P {
+          br {
+            margin-bottom: 10px;
+          }
+        }
+
+        .cross {
+          bottom: 10px;
+          top: unset;
+        }
+      }
+    }
+  }
+}

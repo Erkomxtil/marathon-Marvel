@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'montserat', sans-serif;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: black url("/images/fond-galaxie.jpg");
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app .block {
+  cursor: pointer;
+}
+
+#app .block img {
+  width: 256px;
+}
+
+#app .block p {
+  padding: 4px 8px;
+}
+
+#app #ficheInfos {
+  display: none;
+}
+
+#app #ficheInfos.active {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px  20px;
+}
+
+#app #ficheInfos.active img {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#app #ficheInfos.active .cross {
+  font-size: 0.8rem;
+  background: white;
+  color: black;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media screen and (min-width: 1250px) {
+  #app #ficheInfos {
+    display: none;
+  }
+  #app #ficheInfos.active {
+    width: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+  }
+  #app #ficheInfos.active img {
+    width: 50%;
+    margin-right: 10px;
+  }
+  #app #ficheInfos.active P br {
+    margin-bottom: 10px;
+  }
+  #app #ficheInfos.active .cross {
+    bottom: 10px;
+    top: unset;
+  }
+}
+/*# sourceMappingURL=style.css.map */
